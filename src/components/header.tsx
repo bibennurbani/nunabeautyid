@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ShoppingBag, Heart, User, Menu, X } from 'lucide-react';
+import { ShoppingBag, Heart, User, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -22,6 +22,7 @@ const menuItems = [
 ];
 
 export default function Header() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isOpen, setIsOpen] = useState(false);
 
   return (
