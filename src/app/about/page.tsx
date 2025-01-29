@@ -18,9 +18,9 @@ export default function AboutPage() {
             women across the globe.
           </p>
           <p>
-            At Nunabeauty, we&apos;re committed to using high-quality, sustainable
-            materials and ethical manufacturing processes. We believe in fashion that not
-            only looks good but also feels good - both for the wearer and for our planet.
+            At Nunabeauty, we're committed to using high-quality, sustainable materials
+            and ethical manufacturing processes. We believe in fashion that not only looks
+            good but also feels good - both for the wearer and for our planet.
           </p>
         </div>
         <div>
