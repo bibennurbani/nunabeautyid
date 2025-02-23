@@ -1,0 +1,18 @@
+services:
+  nunabeautyid:
+    build: .
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - proxy
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.nunabeautyid.entrypoints=https'
+      - 'traefik.http.routers.nunabeautyid.rule=Host(`nunabeauty.id`)'
+      - 'traefik.http.routers.nunabeautyid.tls=true'
+      - 'traefik.http.services.nunabeautyid.loadbalancer.server.port=3000'
+
+networks:
+  proxy:
+    external: true
