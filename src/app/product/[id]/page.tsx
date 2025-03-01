@@ -1,17 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { use, useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ProductGrid } from '@/components/products/product-grid';
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+interface ProductPageProps {
+  params: Promise<{ id: string }>;
+}
+
+export default function ProductPage({ params }: ProductPageProps) {
+  const { id } = use(params);
+
   const [quantity, setQuantity] = useState(1);
 
-  // This is mock data. In a real application, you'd fetch this data based on the product ID.
+  // Mock product data
   const product = {
-    id: params.id,
+    id,
     name: 'Modest Activewear Set',
     price: 89.99,
     description:
@@ -22,8 +28,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   };
 
   const handleAddToCart = () => {
-    // Implement add to cart functionality
-    console.log(`Added ${quantity} of product ${params.id} to cart`);
+    console.log(`Added ${quantity} of product ${id} to cart`);
   };
 
   return (
