@@ -24,7 +24,7 @@ const menuItems = [
 ];
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   const [scrolled, setScrolled] = useState(false);

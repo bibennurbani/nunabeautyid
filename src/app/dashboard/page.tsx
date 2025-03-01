@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 
 export default function DashboardPage() {
-  const [activeTab, setActiveTab] = useState('orders');
+  const [, setActiveTab] = useState('orders');
 
   // Mock data
   const orders = [
