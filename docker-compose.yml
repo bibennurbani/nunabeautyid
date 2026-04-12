@@ -8,9 +8,8 @@ services:
       - proxy
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.nunabeautyid.entrypoints=https'
+      - 'traefik.http.routers.nunabeautyid.entrypoints=http'
       - 'traefik.http.routers.nunabeautyid.rule=Host(`nunabeauty.id`)'
-      - 'traefik.http.routers.nunabeautyid.tls=true'
       - 'traefik.http.services.nunabeautyid.loadbalancer.server.port=3000'
 
 networks:
